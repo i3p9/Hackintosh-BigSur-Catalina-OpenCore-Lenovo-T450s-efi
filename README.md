@@ -1,3 +1,14 @@
+## This is a update for Echo's repo. OC has been updated to 0.6.1 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
+Changes I made: 
+* Using VoodooRMI instead of VoodooPS2Trackpad for Touchpad/Trackpoint. I've found this to be leagues better in terms of smoothness and gestures
+* Disabled `SSDT-SMBU` and `SSDT-Thinkpad_Clickpad` patch for VoodooRMI compatibility. Also the clickpad patch didn't work for newer OC versions
+* Switched to  Vanilla OC instead of the modified one
+
+Note: This is a fairly vanilla EFI. If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth
+
+
+
+Original Readme from Echo: 
 # Thinkpad T450s Catalina
 
 ## Notice: If you need to edit config.plist, don't use OpenCore configurator, use PlistEdit pro or Xcode instead.
