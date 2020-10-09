@@ -1,3 +1,5 @@
+## Happy to say that the EFI is currently working in Big Sur Beta as well, without *any* modifications! Feel free to try Big Sur!
+
 ## This is a update for Echo's repo. OC has been updated to 0.6.2 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases.  
 Issues (with OC 0.6.2):
 * None (Please use the EFI and report back!)
@@ -10,6 +12,8 @@ Changes I made:
 
 Note: This is a fairly vanilla EFI. If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth
 
+Big Sur Screenshot (Running Dev Beta 9):
+![About Mac Big Sur](https://i.imgur.com/4U44iJJ.png)
 
 
 Original Readme from Echo: 
