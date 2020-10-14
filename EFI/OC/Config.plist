@@ -1496,13 +1496,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>Sinetek-rtsx.kext</string>
+				<string>AnyAppleUSBMouse.kext</string>
 				<key>Comment</key>
-				<string>Card Reader</string>
+				<string>Apple Mouse Spoof</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/Sinetek-rtsx</string>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1512,13 +1512,13 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>AirportBrcmFixup.kext</string>
+				<string>Sinetek-rtsx.kext</string>
 				<key>Comment</key>
-				<string>AirportBrcmFixup</string>
+				<string>Card Reader</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportBrcmFixup</string>
+				<string>Contents/MacOS/Sinetek-rtsx</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1913,7 +1913,7 @@
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
-			<false/>
+			<true/>
 			<key>AllowSetDefault</key>
 			<false/>
 			<key>ApECID</key>
@@ -2024,7 +2024,7 @@
 				</data>
 				<key>prev-lang:kbd</key>
 				<data>
-				emgtSGFuczoyNTI=
+				ZW4tVVM6MA==
 				</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
@@ -2088,23 +2088,22 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>00</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
 			<data>
-			AA==
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>MacBook9,1</string>
+			<string>MacBookPro12,1</string>
 			<key>SystemSerialNumber</key>
-			<string>00</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>00</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
