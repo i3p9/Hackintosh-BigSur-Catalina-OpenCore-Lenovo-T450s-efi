@@ -1,6 +1,6 @@
 ## Happy to say that the EFI is currently working in Big Sur Beta as well, without *any* modifications! Feel free to try Big Sur!
 
-## This is a update for Echo's repo. OC has been updated to 0.6.2 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases.  
+## This is an update for Echo's repo. OC has been updated to 0.6.2 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases.  
 Issues (with OC 0.6.2):
 * None (Please use the EFI and report back!)
 
@@ -9,6 +9,7 @@ Changes I made:
 * Disabled `SSDT-SMBU` and `SSDT-Thinkpad_Clickpad` patch for VoodooRMI compatibility. Also the clickpad patch didn't work for newer OC versions
 * Switched to  Vanilla OC instead of the modified one
 * Added OpenCanopy support and Mac-like boot GUI
+* Switched to MacBooPro12,1 SMBIOS and tweaked Power Management for better battery life. By switching we lose Wired Sidecar but it was very laggy and often unuseable, but we gained much better power management, thus, better battery life. If you want Sidecar, you can switch back to Macbook9,1
 
 Note: This is a fairly vanilla EFI. If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth
 
@@ -58,7 +59,6 @@ Wireless Card: **DW1820A 00JT494**
 - Touchpad
 - Redpoint
 - miniDP
-- Sidecar (Wireless mode doesn't work)
 - SD Card Reader (Thanks to @willmav5000)
 - Use [one-key-hidpi](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/blob/master/one-key-hidpi) to enable HiDPI
 - If you are using a usb mouse with side buttons, you can spoof apple usb mouse by change the pid and vid in AnyAppleUSBMouse.kext/Info.plist and enable it in config.plist.
@@ -66,3 +66,4 @@ Wireless Card: **DW1820A 00JT494**
 ## What doesn't work
 
 - VGA
+- Sidecar (Wired Sidecar works but only in Macbook9,1 SMBIOS, which has bad battery life, you can choose what you want)
