@@ -1,7 +1,7 @@
 ## Happy to say that the EFI is currently working in Big Sur Beta as well, without *any* modifications! Feel free to try Big Sur!
 
 ## This is an update for Echo's repo. OC has been updated to 0.6.2 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
-![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit)](https://github.com/i3p9/Hackintosh-Catalina-OpenCore-Lenovo-T450s-efi) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.2-red)
+![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit)] ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.2-red)
 Issues (with OC 0.6.2):
 * None (Please use the EFI and report back!)
 
