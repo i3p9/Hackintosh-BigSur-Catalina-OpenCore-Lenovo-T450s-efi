@@ -7,7 +7,7 @@ Then add an entry in DeviceProperties -> Add as follows:
 * `AAPL,slot-name` (Type String): `WLAN`
 * `compatible` (Type String): `pci14e4,4331`
 * `device_type` (Type String): `Airport Extreme`
-* `layout-id` (Type Data 4 Bytes): `20000000`
+* `layout-id` (Type Data 4 Bytes): `20000000` (This essentially sets `brcmfx-driver` to `2` (`AirPortBrcmNIC`) 
 * `model` (Type String): `DW1820A (BCM4350) 802.11ac Wireless`
 * `name` (Type String): `Airport`
 * `pci-aspm-default` (Type Number): `0`
