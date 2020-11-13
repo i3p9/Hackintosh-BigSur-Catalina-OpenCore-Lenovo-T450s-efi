@@ -1,10 +1,10 @@
-## Happy to say that the EFI is currently working in Big Sur Beta as well, without *any* modifications! Feel free to try Big Sur!
+## Notice: Updated to OC 0.6.3 and kexts. Big Sur Update should work out of the box. I'm currently updating to Big Sur stable and will edit if everything works correctly. Will need to change Repo name as well later on.
 
-## This is an update for Echo's repo. OC has been updated to 0.6.2 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
-![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.2-red)
+## This is an update for Echo's repo. OC has been updated to 0.6.3 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
+![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red)
 
-Issues (with OC 0.6.2):
-* None (Please use the EFI and report back!)
+Issues (with OC 0.6.3):
+* Not an issue but while updating to OC 0.6.3, I updated all the Kexts except VoodooPS2, as VoodooRMI haven't gotten any update since last version, I didn't want to mess anything up. I'll try troubleshooting older VoodooRMI with newer VoodooPS2 and then update here. 
 
 Changes I made:
 * Using VoodooRMI instead of VoodooPS2Trackpad for Touchpad/Trackpoint. I've found this to be leagues better in terms of smoothness and gestures
