@@ -11,6 +11,7 @@ Changes I made:
 * Switched to  Vanilla OC instead of the modified one
 * Added OpenCanopy support and Mac-like boot GUI
 * Switched to MacBooPro12,1 SMBIOS and tweaked Power Management for better battery life. By switching we lose Wired Sidecar but it was very laggy and often unuseable, but we gained much better power management, thus, better battery life. If you want Sidecar, you can switch back to Macbook9,1
+* Updated alc_fix for Big Sur
 
 Note: This is a fairly vanilla EFI. If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth
 

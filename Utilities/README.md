@@ -5,8 +5,8 @@ This is where I'll store useful but optional hacks for the laptop
 ## alc_fix
 This is a fix for Headphone jack not working after sleep. To install this, cd into the repository, then:
 
+- `sudo spctl --master-disable`
 - `cd alc_fix`
-- `chmod +x install.sh`
 - `./install.sh`
 
 ## DW1820A
