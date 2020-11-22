@@ -1,6 +1,6 @@
 ## Notice: Updated to OC 0.6.3 and kexts. Big Sur Update is currently working out of the box. Tested it myself. 
 ## This is an update for Echo's repo. OC has been updated to 0.6.3 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
-![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red)
+![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red) [![Gitter](https://badges.gitter.im/ThinkPad-Hackintosh/t450s.svg)](https://gitter.im/ThinkPad-Hackintosh/t450s?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Issues (with OC 0.6.3):
 * When an external monitor is connected via MiniDP, external mouse gets very laggy to the point it's almost unuseable, investigating the issue now. Please let me know if anyone faces this issue. (Only happens in Big Sur)
