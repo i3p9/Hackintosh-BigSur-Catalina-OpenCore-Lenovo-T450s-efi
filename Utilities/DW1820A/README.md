@@ -1,5 +1,7 @@
 Note from i3p9:
 
+`System Update won't work if the card is enabled. Disable the card from BIOS when updating and then enable after the update completes.`
+
 I've updated the kexts needed to run DW1820A properly. Put all the kexts from this folder, add their entries in config.plist -> Kernel -> Add.
 
 Then add an entry in DeviceProperties -> Add as follows:
