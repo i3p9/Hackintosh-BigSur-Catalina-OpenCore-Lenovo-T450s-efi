@@ -57,7 +57,6 @@ efi for Thinkpad T450s (20BXCT01WW) Hackintosh Catalina/Big Sur
 - Touchpad
 - Redpoint
 - miniDP
-- SD Card Reader (Thanks to @willmav5000)
 - Use [one-key-hidpi](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/blob/master/one-key-hidpi) to enable HiDPI
 - If you are using a usb mouse with side buttons, you can spoof apple usb mouse by change the pid and vid in AnyAppleUSBMouse.kext/Info.plist and enable it in config.plist.
 
@@ -65,3 +64,4 @@ efi for Thinkpad T450s (20BXCT01WW) Hackintosh Catalina/Big Sur
 
 - VGA
 - Sidecar (Wired Sidecar works but only in Macbook9,1 SMBIOS, which has bad battery life, you can choose what you want)
+- SD Card Reader (kext is not reliable)
