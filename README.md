@@ -64,4 +64,4 @@ efi for Thinkpad T450s (20BXCT01WW) Hackintosh Catalina/Big Sur
 
 - VGA
 - Sidecar (Wired Sidecar works but only in Macbook9,1 SMBIOS, which has bad battery life, you can choose what you want)
-- SD Card Reader (kext is not reliable)
+- SD Card Reader (RTS5227) (kext is not reliable)
