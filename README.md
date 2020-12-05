@@ -1,9 +1,9 @@
-## Notice: Updated to OC 0.6.3 and kexts. Big Sur Update is currently working out of the box. Tested it myself. 
-## This is an update for Echo's repo. OC has been updated to 0.6.3 and all the kexts are updated to the lastet version to date. I did make some QOL changes for it. I'll try to keep the repo updated following major OC releases. 
-![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red) [![Gitter](https://badges.gitter.im/ThinkPad-Hackintosh/t450s.svg)](https://gitter.im/ThinkPad-Hackintosh/t450s?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+## Notice: Updated to OC 0.6.3 and kexts. EFI currently works in Big Sur and Catalina
+
+![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red)
 
 Issues (with OC 0.6.3):
-* When an external monitor is connected via MiniDP, external mouse gets very laggy to the point it's almost unuseable, investigating the issue now. Please let me know if anyone faces this issue. (Only happens in Big Sur)
+* None
 
 Changes I made:
 * Using VoodooRMI instead of VoodooPS2Trackpad for Touchpad/Trackpoint. I've found this to be leagues better in terms of smoothness and gestures
@@ -13,12 +13,40 @@ Changes I made:
 * Switched to MacBooPro12,1 SMBIOS and tweaked Power Management for better battery life. By switching we lose Wired Sidecar but it was very laggy and often unuseable, but we gained much better power management, thus, better battery life. If you want Sidecar, you can switch back to Macbook9,1
 * Updated alc_fix for Big Sur
 
-Note: This is a fairly vanilla EFI. If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth
+Since this is a fairly vanilla EFI, if you want to add kexts/patches to it, go ahead, here's some suggestions:  
+* If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth support. Works well with the 7265AC that comes with T450s, although it has a perticular issue with Bluetooth audio (AAC/aptX). Check this [Issue](https://github.com/OpenIntelWireless/itlwm/issues/85) for more information.
+* For better battery life and thermal, use VoltageShift. I have a small guide [here.](#utilities)
+* I highly recommend HiDPI, use [one-key-hidpi](https://github.com/mlch911/one-key-hidpi) to enable HiDPI.
 
 Big Sur Screenshot (Currently running Stable 11.0.1:
 ![About Mac Big Sur](https://i.imgur.com/7PHmsEm.png)
 
-Original Readme from Echo: 
+# What's working
+Everything works except for VGA (macOS doesn't support it), Sidecar (Processor doesn't support it) and SD Card Reader (unreliable kext).
+Stuff that works: Proper touchpad with gestures, Function keys, Brightness, Power management, Sleep/wake, Wifi/Bluetooth, Airdrop, Instant Hotspot, Continuity, Import from iphone/ipad, MiniDP etc.
+
+# Utilities
+Here I'll have utlities that are necessary or good-to-have for this computer. 
+
+ For alc_fix, DW1820A Config and other, go to the folder [Utilities](https://github.com/i3p9/Hackintosh-BigSur-Catalina-OpenCore-Lenovo-T450s-efi/tree/master/Utilities) to find detailed information on them. 
+
+## VoltageShift
+[VoltageShift](https://github.com/sicreative/VoltageShift) is one of the best tool to have lower temp and better battery life. *Note that this is a fairly advance tool and it **can** damage your computer if used without proper research. *
+Considering you understand the risk, let's go ahead and set it up:
+- The kext needed is already in the EFI, disabled. first we need to enable it. Go to `config.plist` and change `Kernel -> Add -> Item 23 -> Enabled` boolean from `NO` to `YES` (Item 23 is not static, you just have to find the entry where you have VoltageShift.kext)
+- Reboot. Then download and copy VoltageShift to `/usr/local/bin`
+```bash
+wget link
+sudo cp voltageshift /usr/local/bin
+```
+- Restart terminal and then check if voltageshift is working by `voltageshift info`
+- If working, then you can undervolt your CPU by running `voltageshift offset -90` (I don't recommend undervolting below -100mV, just do -90mV first, stress test to see if stable and then test -100mV)
+- The undervolt will stick until the next reboot. So I suggest Automator/AppleScript to run it on boot. You can also use AppleScript to undervol/overvolt/switch turbo boost mode depending on what apps you're running/battery percentage etc.  
+This was just the basic undervolt guide for CPU only. I highly suggest reading the Readme on the [VoltageShift](https://github.com/sicreative/VoltageShift) repo to learn mode about Undervolting and switching Intel Turbo Boost to on/off. 
+
+<details><summary>Original Readme from Echo</summary>
+<p>
+
 # Thinkpad T450s Catalina
 
 ## Notice: If you need to edit config.plist, don't use OpenCore configurator, use PlistEdit pro or Xcode instead.
@@ -65,3 +93,5 @@ efi for Thinkpad T450s (20BXCT01WW) Hackintosh Catalina/Big Sur
 - VGA
 - Sidecar (Wired Sidecar works but only in Macbook9,1 SMBIOS, which has bad battery life, you can choose what you want)
 - SD Card Reader (RTS5227) (kext is not reliable)
+</p>
+</details>
