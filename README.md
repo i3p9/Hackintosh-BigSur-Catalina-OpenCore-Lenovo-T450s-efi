@@ -23,6 +23,7 @@ Big Sur Screenshot (Currently running Stable 11.0.1:
 
 # What's working
 Everything works except for VGA (macOS doesn't support it), Sidecar (Processor doesn't support it) and SD Card Reader (unreliable kext).
+
 Stuff that works: Proper touchpad with gestures, Function keys, Brightness, Power management, Sleep/wake, Wifi/Bluetooth, Airdrop, Instant Hotspot, Continuity, Import from iphone/ipad, MiniDP etc.
 
 # Utilities
@@ -36,7 +37,7 @@ Considering you understand the risk, let's go ahead and set it up:
 - The kext needed is already in the EFI, disabled. first we need to enable it. Go to `config.plist` and change `Kernel -> Add -> Item 23 -> Enabled` boolean from `NO` to `YES` (Item 23 is not static, you just have to find the entry where you have VoltageShift.kext)
 - Reboot. Then download and copy VoltageShift to `/usr/local/bin`
 ```bash
-wget link
+wget https://raw.githubusercontent.com/i3p9/Hackintosh-BigSur-Catalina-OpenCore-Lenovo-T450s-efi/master/Utilities/VoltageShift/voltageshift
 sudo cp voltageshift /usr/local/bin
 ```
 - Restart terminal and then check if voltageshift is working by `voltageshift info`
