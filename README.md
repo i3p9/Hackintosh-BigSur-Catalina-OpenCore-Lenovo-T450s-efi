@@ -1,9 +1,9 @@
-## Notice: Updated to OC 0.6.3 and kexts. EFI currently works in Big Sur and Catalina
+## Notice: Updated to OC 0.6.4 and kexts. EFI currently works in Big Sur and Catalina
 
-![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.3-red)
+![img](https://img.shields.io/github/last-commit/i3p9/Hackintosh-Catalina-Opencore-Lenovo-T450s-efi.svg?color=green&label=last-commit) ![img](https://img.shields.io/badge/macOS%20support-catalina--bigsur-blue) ![img](https://img.shields.io/badge/Opencore%20version-0.6.4-red)
 
-Issues (with OC 0.6.3):
-* None
+Issues (with OC 0.6.4):
+* Opencore 0.6.4 has introduced an issue with BootStrap. Please follow the steps linked [here](https://github.com/acidanthera/bugtracker/issues/1222#issuecomment-739241310). In the config I have set `BootProtect` to `None`, and `RequestBootVarRouting` is already enabled. So all you have to do it boot using `BootProtect` to `None` once, reset nvram and then set `BootProtect` to `Bootstrap`. (This step is unnecessary if you don't want Bootstrap, it is only needed if you run mutiple OS in your computer)
 
 Changes I made:
 * Using VoodooRMI instead of VoodooPS2Trackpad for Touchpad/Trackpoint. I've found this to be leagues better in terms of smoothness and gestures
@@ -12,14 +12,12 @@ Changes I made:
 * Added OpenCanopy support and Mac-like boot GUI
 * Switched to MacBooPro12,1 SMBIOS and tweaked Power Management for better battery life. By switching we lose Wired Sidecar but it was very laggy and often unuseable, but we gained much better power management, thus, better battery life. If you want Sidecar, you can switch back to Macbook9,1
 * Updated alc_fix for Big Sur
+* Added `YogaSMC` kext to enable Fan reading. Control is currently not working, will update once it works. 
 
 Since this is a fairly vanilla EFI, if you want to add kexts/patches to it, go ahead, here's some suggestions:  
 * If you have Intel WiFi/BT Card, use [OpenIntelWireless](https://github.com/OpenIntelWireless) for WiFi/Bluetooth support. Works well with the 7265AC that comes with T450s, although it has a perticular issue with Bluetooth audio (AAC/aptX). Check this [Issue](https://github.com/OpenIntelWireless/itlwm/issues/85) for more information.
 * For better battery life and thermal, use VoltageShift. I have a small guide [here.](#utilities)
 * I highly recommend HiDPI, use [one-key-hidpi](https://github.com/mlch911/one-key-hidpi) to enable HiDPI.
-
-Big Sur Screenshot (Currently running Stable 11.0.1:
-![About Mac Big Sur](https://i.imgur.com/7PHmsEm.png)
 
 # What's working
 Everything works except for VGA (macOS doesn't support it), Sidecar (Processor doesn't support it) and SD Card Reader (unreliable kext).
@@ -43,7 +41,10 @@ sudo cp voltageshift /usr/local/bin
 - Restart terminal and then check if voltageshift is working by `voltageshift info`
 - If working, then you can undervolt your CPU by running `voltageshift offset -90` (I don't recommend undervolting below -100mV, just do -90mV first, stress test to see if stable and then test -100mV)
 - The undervolt will stick until the next reboot. So I suggest Automator/AppleScript to run it on boot. You can also use AppleScript to undervol/overvolt/switch turbo boost mode depending on what apps you're running/battery percentage etc.  
-This was just the basic undervolt guide for CPU only. I highly suggest reading the Readme on the [VoltageShift](https://github.com/sicreative/VoltageShift) repo to learn mode about Undervolting and switching Intel Turbo Boost to on/off. 
+This was just the basic undervolt guide for CPU only. I highly suggest reading the Readme on the [VoltageShift](https://github.com/sicreative/VoltageShift) repo to learn mode about Undervolting and switching Intel Turbo Boost to on/off.
+
+Big Sur Screenshot (Currently running Stable 11.0.1:
+![About Mac Big Sur](https://i.imgur.com/7PHmsEm.png)
 
 <details><summary>Original Readme from Echo</summary>
 <p>
